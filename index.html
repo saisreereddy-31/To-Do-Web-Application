@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header>
+            <h1>My To-Do List ✨</h1>
+            <p>Plan your day. Achieve your goals.</p>
+        </header>
+
+        <form id="taskForm">
+            <input type="text" id="taskInput"
+                   placeholder="What do you need to do?" required>
+
+            <input type="date" id="taskDate" aria-label="Task date">
+            <input type="time" id="taskTime" aria-label="Task time">
+
+            <button type="submit" id="submitBtn">Add Task</button>
+        </form>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="pending">Pending</button>
+            <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="task-summary">
+            <span id="totalTasks">0 tasks</span>
+            <span id="completedTasks">0 completed</span>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage">No tasks yet. Add your first task! 🌱</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
